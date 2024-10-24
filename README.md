@@ -211,7 +211,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Contact
 
 Your Name - [Naga Haritha Samala-samala.snh@gmail.com]
-Project Link: [your-repository-url]
+Project Link: [https://github.com/haritha-samala/Tic-Tac-Toe.git]
 
 ---
 
