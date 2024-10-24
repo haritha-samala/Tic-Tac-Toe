@@ -1,0 +1,205 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * 0.9);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../src/images/tb.jpg");
+  background-clip: border-box;
+  background-size: 100vw 137vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0rem 0;
+  color: #fff;
+  text-transform: uppercase;
+  border-style: groove;
+  letter-spacing: 2px;
+  background: linear-gradient(
+    to top,
+    #ad5389,
+    #3c1053
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#pauseBtn {
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(145deg, #00d2ff, #3a7bd5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  border: 1px solid #ccc;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin: 1vh 40vw;
+}
+
+#pauseBtn:hover {
+  background-color: #f5f522;
+  border-color: #aaa;
+  transform: scale(1.05);
+}
+
+.board {
+  width: 100vw;
+  height: calc(100vh - 200px); /* Adjusted to account for header and button */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  position: relative;
+  cursor: pointer;
+}
+
+.cell.x,
+.cell.o {
+  cursor: not-allowed;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+  border-bottom: none;
+}
+
+.cell.x::before,
+.cell.x::after {
+  background-color: red;
+}
+
+.cell.o::before {
+  background-color: blue;
+}
+
+.cell.o::after {
+  background-color: lightgray;
+}
+
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after,
+.board.o .cell:not(.x):not(.o):hover::before {
+  background-color: lightgray;
+}
+
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after,
+.cell.x::before,
+.cell.x::after {
+  position: absolute;
+  content: "";
+  width: calc(var(--mark-size) * 0.15);
+  height: var(--mark-size);
+}
+
+.board.x .cell:not(.x):not(.o):hover::before,
+.cell.x::before {
+  transform: rotate(45deg);
+}
+
+.board.x .cell:not(.x):not(.o):hover::after,
+.cell.x::after {
+  transform: rotate(-45deg);
+}
+
+.cell.o::before,
+.cell.o::after,
+.board.o .cell:not(.x):not(.o):hover::before,
+.board.o .cell:not(.x):not(.o):hover::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+
+.cell.o::before,
+.board.o .cell:not(.x):not(.o):hover::before {
+  width: var(--mark-size);
+  height: var(--mark-size);
+}
+
+.board.o .cell:not(.x):not(.o):hover::after,
+.cell.o::after {
+  width: calc(var(--mark-size) * 0.7);
+  height: calc(var(--mark-size) * 0.7);
+  background-color: white;
+}
+
+.winning-msg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+.winning-msg button {
+  font-size: 3rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.winning-msg button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.winning-msg.show {
+  display: flex;
+}

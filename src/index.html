@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <main>
+      <header><h1>Tic tac toe</h1></header>
+      <article>
+        <button id="pauseBtn">Pause Music</button>
+      </article>
+
+      <!-- board -->
+      <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+      </div>
+
+      <!-- after game finish display -->
+      <div class="winning-msg" id="winningMsg">
+        <div data-winning-msg-text>X Wins!</div>
+        <button id="restartBtn">Restart</button>
+      </div>
+    </main>
+    <!-- Audio --><!-- loop  -->
+    <audio
+      src="../audio/game-music-loop[1].mp3"
+      autoplay
+      loop
+      id="bgMusic"
+    ></audio>
+    <!-- winning sound -->
+    <audio src="../audio/win[1].mp3" id="win"></audio>
+    <!-- draw sound -->
+    <audio src="../audio/draw[1].mp3" id="draw"></audio>
+    <div id="app"></div>
+
+    <script src="./index.mjs" type="module"></script>
+  </body>
+</html>
