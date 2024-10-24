@@ -13,6 +13,10 @@ A stylish implementation of the classic Tic Tac Toe game featuring a custom back
 - 🎭 X and O markers with hover effects
 - 🔄 Smooth transitions and animations
 
+## 🚀 Live Demo
+
+- Play the game here https://sxcvy7.csb.app/
+
 ## 🛠️ Project Structure
 
 ```
@@ -32,8 +36,7 @@ tic-tac-toe/
 └── README.md              # This file
 
 
-##🚀 Live Demo
-- Play the game here [https://sxcvy7.csb.app/]
+
 ```
 
 ## 🚀 Getting Started
@@ -213,7 +216,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Support
 
-For support, email [samala.snh@gmail.com] or open an issue in the repository.
+For support, email samala.snh@gmail.com or open an issue in the repository.
 
 ---
 
