@@ -31,6 +31,9 @@ tic-tac-toe/
 │   └── preview.png        # Game preview image
 └── README.md              # This file
 
+
+##🚀 Live Demo
+- Play the game here [https://sxcvy7.csb.app/]
 ```
 
 ## 🚀 Getting Started
@@ -45,7 +48,7 @@ tic-tac-toe/
 1. Clone the repository:
 
 ```bash
-git clone [your-repository-url]
+git clone [https://github.com/haritha-samala/Tic-Tac-Toe.git]
 ```
 
 2. Navigate to the project directory:
@@ -208,10 +211,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Modern UI design principles
 - Community feedback and suggestions
 
-## 📞 Contact
+## 📞 Support
 
-Your Name - [Naga Haritha Samala-samala.snh@gmail.com]
-Project Link: [https://github.com/haritha-samala/Tic-Tac-Toe.git]
+For support, email [samala.snh@gmail.com] or open an issue in the repository.
 
 ---
 
